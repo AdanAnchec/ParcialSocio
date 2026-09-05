@@ -913,8 +913,8 @@ html, body{ overflow-x: hidden; }
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    padding: 22px 18px 18px;
-    gap: 10px;
+    padding: 20px 18px 16px;
+    gap: 16px;
     transform: translateX(100%);
     transition: transform 0.35s cubic-bezier(.22,.8,.3,1), visibility 0s linear 0.35s;
     visibility: hidden;
@@ -947,8 +947,8 @@ html, body{ overflow-x: hidden; }
     display: flex;
     align-items: center;
     gap: 13px;
-    padding: 6px 6px 18px;
-    margin-bottom: 8px;
+    padding: 4px 4px 14px;
+    margin-bottom: 2px;
     border-bottom: 1px dashed var(--line);
     position: relative;
   }
@@ -1000,14 +1000,14 @@ html, body{ overflow-x: hidden; }
 
   .nav-link{
     position: relative;
-    padding: 16px 16px 16px 14px;
+    padding: 20px 18px 20px 16px;
     font-size: 15px;
     background: linear-gradient(160deg, var(--ink-2), var(--ink-3));
     border: 1px solid var(--line);
-    border-radius: 10px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 16px;
     opacity: 0;
     transform: translateX(24px);
     box-shadow: 0 6px 18px rgba(0,0,0,0.18);
@@ -1015,14 +1015,14 @@ html, body{ overflow-x: hidden; }
   }
   .nav-link-num{
     font-family: var(--mono);
-    font-size: 12.5px;
+    font-size: 13px;
     font-weight: 600;
     color: var(--ink);
     background: var(--gradient-brass);
     background-size: 200% 100%;
-    min-width: 30px;
-    width: 30px;
-    height: 30px;
+    min-width: 34px;
+    width: 34px;
+    height: 34px;
     flex: 0 0 auto;
     display: flex;
     align-items: center;
@@ -1032,7 +1032,7 @@ html, body{ overflow-x: hidden; }
   }
   .nav-link-text{
     font-family: var(--serif);
-    font-size: 19.5px;
+    font-size: 21px;
     font-weight: 600;
     color: var(--paper);
     flex: 1;
