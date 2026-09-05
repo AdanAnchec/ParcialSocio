@@ -188,6 +188,10 @@ a{ color: inherit; }
   border: 1px solid var(--line);
   border-radius: var(--radius);
   cursor: pointer;
+  position: relative;
+  z-index: 60;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 .nav-toggle span{
   display: block;
@@ -195,6 +199,7 @@ a{ color: inherit; }
   height: 1.5px;
   margin: 0 auto;
   background: var(--paper);
+  pointer-events: none;
 }
 
 /* ================= HERO ================= */
@@ -871,7 +876,6 @@ a{ color: inherit; }
 }
 
 /* ================= RESPONSIVE ================= */
-html{ overflow-x: hidden; }
 body{ overflow-x: hidden; }
 
 /* ---- laptops pequeños / tablets grandes en horizontal ---- */
@@ -896,6 +900,7 @@ body{ overflow-x: hidden; }
     transform: translateX(100%);
     transition: transform 0.25s ease;
     overflow-y: auto;
+    z-index: 55;
   }
   .site-nav.is-open{ transform: translateX(0); }
   .nav-link{ padding: 15px 14px; font-size: 15px; border-bottom: 1px solid var(--line); border-radius: 0; }
