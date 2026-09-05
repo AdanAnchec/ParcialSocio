@@ -15,6 +15,7 @@ const siteNav = document.getElementById('siteNav');
 if (navToggle && siteNav){
   navToggle.addEventListener('click', () => {
     const isOpen = siteNav.classList.toggle('is-open');
+    navToggle.classList.toggle('is-open', isOpen);
     navToggle.setAttribute('aria-expanded', String(isOpen));
     // respaldo inline por si algún estilo en caché interfiere con la clase CSS
     siteNav.style.transform = isOpen ? 'translateX(0)' : 'translateX(100%)';
@@ -23,6 +24,7 @@ if (navToggle && siteNav){
   siteNav.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
       siteNav.classList.remove('is-open');
+      navToggle.classList.remove('is-open');
       siteNav.style.transform = 'translateX(100%)';
       navToggle.setAttribute('aria-expanded', 'false');
     });
