@@ -94,8 +94,11 @@ a{ color: inherit; }
 
 /* ================= HEADER / NAV ================= */
 .site-header{
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   z-index: 50;
   background: rgba(27,31,42,0.92);
   backdrop-filter: blur(8px);
@@ -114,6 +117,10 @@ a{ color: inherit; }
   0%{ background-position: 0% 0; }
   100%{ background-position: 200% 0; }
 }
+/* el header ahora es fixed (no ocupa espacio en el flujo),
+   así que compensamos con el mismo espacio que antes ocupaba */
+main{ padding-top: 67px; }
+.hero, .module{ scroll-margin-top: 67px; }
 .header-inner{
   display: flex;
   align-items: center;
@@ -909,6 +916,8 @@ html, body{ overflow-x: hidden; }
 /* ---- tablets (incluye la nav hamburguesa, para que no se apriete el menú) ---- */
 @media (max-width: 900px){
   .header-inner{ height: 60px; }
+  main{ padding-top: 63px; }
+  .hero, .module{ scroll-margin-top: 63px; }
   .site-nav{
     position: fixed;
     top: 60px;
