@@ -13,17 +13,10 @@ const navToggle = document.getElementById('navToggle');
 const siteNav = document.getElementById('siteNav');
 
 if (navToggle && siteNav){
-  const isMobileNav = () => window.matchMedia('(max-width: 900px)').matches;
-
   navToggle.addEventListener('click', () => {
     const isOpen = siteNav.classList.toggle('is-open');
     navToggle.classList.toggle('is-open', isOpen);
     navToggle.setAttribute('aria-expanded', String(isOpen));
-    // respaldo inline por si algún estilo en caché interfiere con la clase CSS
-    // (solo aplica al menú móvil; en escritorio el nav no usa transform)
-    if (isMobileNav()){
-      siteNav.style.transform = isOpen ? 'translateX(0)' : 'translateX(100%)';
-    }
   });
 
   siteNav.querySelectorAll('.nav-link').forEach(link => {
@@ -31,9 +24,6 @@ if (navToggle && siteNav){
       siteNav.classList.remove('is-open');
       navToggle.classList.remove('is-open');
       navToggle.setAttribute('aria-expanded', 'false');
-      if (isMobileNav()){
-        siteNav.style.transform = 'translateX(100%)';
-      }
     });
   });
 }
